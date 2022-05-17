@@ -10,16 +10,20 @@ class ProductScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
-      appBar: AppBar(
-        elevation: 0,
-        title: Text('Dashboard'),
-        centerTitle: false,
-        actions: <Widget>[
-          IconButton(
-              onPressed: () => {},
-              icon: SvgPicture.asset("assets/icons/notification.svg"))
-        ],
-      ),
+      appBar: buildAppBar(),
+    );
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      elevation: 0,
+      title: Text('Dashboard'),
+      centerTitle: false,
+      actions: <Widget>[
+        IconButton(
+            onPressed: () => {},
+            icon: SvgPicture.asset("assets/icons/notification.svg"))
+      ],
     );
   }
 }
