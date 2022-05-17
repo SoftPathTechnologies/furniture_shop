@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shop/components/product_screen.dart';
+import 'package:furniture_shop/screens/product/product_screen.dart';
 import 'package:furniture_shop/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 
