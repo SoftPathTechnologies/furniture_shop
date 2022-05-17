@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_shop/components/product_screen.dart';
+import 'package:furniture_shop/constants.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +16,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Funiture Shop',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
+          primaryColor: kPrimaryColor,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          colorScheme:
+              ColorScheme.fromSwatch().copyWith(secondary: kPrimaryColor)),
       debugShowCheckedModeBanner: false,
       home: ProductScreen(),
     );
