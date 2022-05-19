@@ -14,7 +14,9 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        searchBox(),
+        searchBox(
+          onChanged: (value) {},
+        ),
         categoryList(),
         SizedBox(
           height: kDefaultPadding / 2,
@@ -35,6 +37,7 @@ class Body extends StatelessWidget {
                 itemBuilder: (context, index) => productCard(
                       itemIndex: index,
                       product: products[index],
+                      press: () {},
                     )),
           ],
         ))
