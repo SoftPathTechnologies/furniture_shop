@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:furniture_shop/components/search_box.dart';
 import 'package:furniture_shop/constants.dart';
 import 'package:furniture_shop/models/product.dart';
+import 'package:furniture_shop/screens/details/details_screen.dart';
 import 'package:furniture_shop/screens/product/component/category_list.dart';
 import 'package:furniture_shop/screens/product/component/product_card.dart';
 
@@ -35,10 +36,18 @@ class Body extends StatelessWidget {
             ListView.builder(
                 itemCount: products.length,
                 itemBuilder: (context, index) => productCard(
-                      itemIndex: index,
-                      product: products[index],
-                      press: () {},
-                    )),
+                    itemIndex: index,
+                    product: products[index],
+                    press: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailScreen(
+                            products: products[index],
+                          ),
+                        ),
+                      );
+                    })),
           ],
         ))
       ],
