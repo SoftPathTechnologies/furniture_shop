@@ -37,6 +37,16 @@ dependencies:
   flutter_svg: ^1.0.3
   google_fonts: ^2.3.2
   toast: ^0.3.0
+  flutter_app_name: ^0.1.1
+  flutter_launcher_icons: "^0.9.2"
+
+flutter_app_name:
+  name: "Furniture Store"
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icon.png"
 
 dev_dependencies:
   flutter_test:
